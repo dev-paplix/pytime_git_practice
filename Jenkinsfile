@@ -16,8 +16,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'apt update'
-                sh 'apt upgrade -y'
+                sh 'apt-get update'
+                sh 'apt-get upgrade -y'
                 sh 'apt-get install python3 -y'
                 sh 'apt-get install python3.11-venv -y'
                 sh 'python3 -m venv .venv'
