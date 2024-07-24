@@ -24,7 +24,7 @@ pipeline {
                     python3 -m venv .venv
                     . .venv/bin/activate
                     pip install DateTime
-                    python3 py_text.py'
+                    python3 py_text.py
                     '''
             }
         }
