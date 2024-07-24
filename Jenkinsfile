@@ -20,10 +20,12 @@ pipeline {
                 sh 'apt-get upgrade -y'
                 sh 'apt-get install python3 -y'
                 sh 'apt-get install python3.11-venv -y'
-                sh 'python3 -m venv .venv'
-                sh '. .venv/bin/activate'
-                sh 'pip install DateTime'
-                sh 'python3 py_text.py'
+                sh '''
+                    python3 -m venv .venv
+                    . .venv/bin/activate
+                    pip install DateTime
+                    python3 py_text.py'
+                    '''
             }
         }
         stage('Deliver') {
